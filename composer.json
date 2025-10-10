@@ -1,0 +1,22 @@
+{
+    "name": "superpms/helper-hrb",
+    "license": "Apache-2.0",
+    "description": "pms helper hrb",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "pms\\": "src/pms/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Guest",
+            "email": "kid666@88.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "superpms/helper-fetch": "v1.0.x-dev"
+    }
+}
