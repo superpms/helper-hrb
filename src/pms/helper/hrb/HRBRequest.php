@@ -55,6 +55,12 @@ abstract class HRBRequest implements HRBRequestInterface
         return $this;
     }
 
+    public function pushArgument(string $key, mixed $value): static
+    {
+        $this->arguments[$key] = $value;
+        return $this;
+    }
+
 
     public function getQuery(): array{
         return $this->query;
@@ -62,6 +68,12 @@ abstract class HRBRequest implements HRBRequestInterface
 
     public function setQuery(array $query): static{
         $this->query = $query;
+        return $this;
+    }
+
+    public function pushQuery(string $key, string $value):static
+    {
+        $this->query[$key] = $value;
         return $this;
     }
 
