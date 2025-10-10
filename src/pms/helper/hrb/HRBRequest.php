@@ -12,8 +12,7 @@ abstract class HRBRequest implements HRBRequestInterface
 
     protected array $query = [];
 
-    public function getMethod(): string
-    {
+    public function getMethod(): string{
         return strtoupper($this->method);
     }
 
@@ -22,18 +21,24 @@ abstract class HRBRequest implements HRBRequestInterface
         return $this->uri;
     }
 
+    public function setUri(string $uri): static
+    {
+        $this->uri = $uri;
+        return $this;
+    }
+
     public function getHeaders(): array
     {
         return $this->headers;
     }
 
-    public function setHeaders(array $headers): self
+    public function setHeaders(array $headers): static
     {
         $this->headers = $headers;
         return $this;
     }
 
-    public function pushHeader(string $header): self
+    public function pushHeader(string $header): static
     {
         $this->headers [] = $header;
         return $this;
@@ -44,7 +49,7 @@ abstract class HRBRequest implements HRBRequestInterface
         return $this->arguments;
     }
 
-    public function setArguments(mixed $arguments): self
+    public function setArguments(mixed $arguments): static
     {
         $this->arguments = $arguments;
         return $this;
@@ -55,7 +60,7 @@ abstract class HRBRequest implements HRBRequestInterface
         return $this->query;
     }
 
-    public function setQuery(array $query): self{
+    public function setQuery(array $query): static{
         $this->query = $query;
         return $this;
     }
