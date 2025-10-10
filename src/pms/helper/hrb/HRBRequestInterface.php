@@ -7,6 +7,7 @@ interface HRBRequestInterface
     public function getMethod(): string;
 
     public function getUri(): string;
+    public function setUri(string $uri): static;
 
     public function getHeaders(): array;
     public function setHeaders(array $headers): self;
