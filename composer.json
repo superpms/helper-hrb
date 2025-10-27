@@ -17,6 +17,6 @@
     ],
     "require": {
         "php": ">=8.1",
-        "superpms/helper-fetch": "v1.0.x-dev"
+        "superpms/helper-fetch": "^1.0.0"
     }
 }
