@@ -2,10 +2,9 @@
 
 namespace pms\helper\hrb;
 
-use pms\ArrayObjectAccess;
-
-abstract class HRBOptions extends ArrayObjectAccess
+abstract class HRBOptions
 {
+    protected array $data = [];
     /**
      * @throws \Exception
      */
